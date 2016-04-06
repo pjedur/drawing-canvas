@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Canvas</title>
+        <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
+        <link rel="author" href="humans.txt">
+    </head>
+    <body style="margin-left:100px">
+        <div>
+          <h1 class="navbar-collapse" > Canvas </h1>
+          <div>
+            <button class="toolButton" data-tooltype="rect"> Rectangle </button>
+            <button class="toolButton" data-tooltype="circle"> Circle </button>
+            <button class="toolButton" data-tooltype="line"> Line </button>
+            <button class="toolButton" data-tooltype="pen"> Pen </button>
+            <button class="toolButton textarea" data-tooltype="text"> text </button>
+            <select class="fontButton" >
+              <option value="18px Times New Roman"  style="font:Calibri"> Times New Roman </option>
+              <option value="18px Arial"> Arial </option>
+              <option value="18px Calibri"> Calibri </option>
+              <option value="18px Courier New"> CourierNew </option>
+            </select>
+        </div>
+        <div>
+          <label for="colorButton"> Color : </label>
+            <select class="colorButton" >
+              <option value="#000000" style="color:black"> Black </option>
+              <option value="#FF0000" style="color:red"> Red </option>
+              <option value="#0000FF" style="color:blue"> Blue </option>
+              <option value="#00CC00" style="color:green"> Green </option>
+              <option value="#FFFF00" style="color:#DDFF00"> Yellow </option>
+            </select>
+
+          <label for="lineWidth"> Linewidth : </label>
+            <select class="lineWidth">
+              <option value="1" > 1 </option>
+              <option value="2" > 2 </option>
+              <option value="3" > 3 </option>
+              <option value="4" > 4 </option>
+              <option value="5" > 5 </option>
+            </select>
+        </div>
+        <div>
+          <button class="UndoRedo" data-tooltype="undo"> Un-do </button>
+          <button class="UndoRedo" data-tooltype="redo"> Re-do </button>
+          <button class="toolButton" data-tooltype="eraser"> Eraser </button>
+          <button class="clear"> clear canvas </button>
+          <div>
+            <button class="saveButton"> Save </button>
+            <button class="loadButton"> Load </button>
+            <div  class="loadform" name="loadform">
+            Username:
+             <input type="text" name="user1" id="user1">
+            </div>
+             <button class="okButton1"> OK </button>
+            <div>
+            <form class="saveform" name="saveform">
+              Username:
+             <input class="userform" type="text" name="user" id="user">
+             Title:
+             <input type="text" name="title" id="title">
+
+            </form>
+            <button class="okButton"> OK </button>
+          <div>
+          <div class="whiteBoardList" id="whiteBoardList" style="float:right; margin-right:100px" ></div>
+          </div>
+        </div>
+      </div>
+        <canvas style="border:1px solid #000000; float:left;" id= "MyCanvas" height="450" width="1000">
+
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+        <script src="models.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
